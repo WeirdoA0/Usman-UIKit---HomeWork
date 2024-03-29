@@ -11,7 +11,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     var loginDelegate: LoginViewControllerDelegate?
     
-    var fovoriteVC: FavoritesViewController?
     
     //MARK: SubViews
     
@@ -293,10 +292,10 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
 #endif
                 
                 let VController = ProfileViewController()
-                
+                let favoriteVC = (self?.tabBarController?.viewControllers?.last as? UINavigationController)?.viewControllers.first as? FavoritesViewController
                 
                 VController.viewModel = ProfileViewModel(user: userService.user)
-                VController.favoriteVCDelegate = self?.fovoriteVC
+                VController.favoriteVCDelegate = favoriteVC
 
                 VController.tabBarItem = self?.tabBarItem
                 self?.navigationController?.setViewControllers([VController], animated: true)

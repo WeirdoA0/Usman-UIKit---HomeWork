@@ -24,14 +24,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        NetworkService.request(url: url!)
 
 
+
         let logInViewController = LogInViewController()
         let feedViewController = FeedViewController()
         let multMediadeiaVC = MultimediaVeiwController()
         let favoritesVC = FavoritesViewController()
         
         let tabBarController = UITabBarController()
-        
-        logInViewController.fovoriteVC = favoritesVC
         
         tabBarController.viewControllers = [multMediadeiaVC,feedViewController,logInViewController, favoritesVC].map {
             UINavigationController(rootViewController: $0)

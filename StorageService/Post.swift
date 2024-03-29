@@ -35,7 +35,7 @@ public extension Post {
         let text2: String = "Какой замечательный, такой зеленый, такой хороший запах - запах природы, рекомендую всем почаще выходить на природу, полезно не только ддя здоровья тела, но и духа"
         let text: String = " От 'Hello, World' до первого сложного iOS-приложения - всего один курс. Если чувствуете в себе силу для покорения топов AppStrore - пора начинать действовать!"
         let posts = [
-            Post(author: "Нетология. Меряем карьеру через образование.", description: text , image: "netologyLogo", like: 766, views: 893, id: 1 ),
+            Post(author: "Нетология", description: text , image: "netologyLogo", like: 766, views: 893, id: 1 ),
             Post(author: "Любитель природы", description: text2, image: "forest", like: 150, views: 637, id: 2),
             Post(author: "Любитель игр", description: text3, image: "gta", like: 11105, views: 56742, id: 3)
             ]

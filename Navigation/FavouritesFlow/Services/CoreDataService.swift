@@ -10,6 +10,7 @@ import CoreData
 
 protocol CoreDataServiceProtocol {
     var context: NSManagedObjectContext { get }
+    var backgroundContext: NSManagedObjectContext { get }
     func saveContext()
 }
 
@@ -28,6 +29,11 @@ class CoreDataService: CoreDataServiceProtocol  {
     
     private(set) lazy var context: NSManagedObjectContext = {
         container.viewContext
+    }()
+    private(set) lazy var backgroundContext: NSManagedObjectContext = {
+        let context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        context.persistentStoreCoordinator = container.persistentStoreCoordinator
+        return context
     }()
     
     func saveContext(){

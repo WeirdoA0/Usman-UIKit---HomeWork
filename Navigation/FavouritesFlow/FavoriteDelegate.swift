@@ -11,7 +11,6 @@ import StorageService
 protocol FavoriteDelegateProtocol {
 
     func addToFavorite(post: Post)
-    func deleteFromFavorite(id: Int)
     
 }
 

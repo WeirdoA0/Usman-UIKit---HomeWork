@@ -16,13 +16,14 @@ import FirebaseAuth
     func singUP(login: String, password: String, completion: @escaping(Result<UserFirebase, Error>) -> Void)
 }
 
-class CheckerService {
+class CheckerService: CheckerServiceProtocol {
     
     func checkCredentials(login: String, password: String, completion: @escaping(Result<UserFirebase, Error>) -> Void){
         Auth.auth().signIn(withEmail: login, password: password, completion: { authResult , error in
             if let error = error {
                 print("Failed login")
                 completion(.failure(error))
+                return
             }
             if let authResult = authResult {
                 let user = authResult.user
@@ -32,7 +33,7 @@ class CheckerService {
         
     }
     
-    func singUp(login: String, password: String, completion: @escaping(Result<UserFirebase, Error>) -> Void){
+    func singUP(login: String, password: String, completion: @escaping(Result<UserFirebase, Error>) -> Void){
         Auth.auth().createUser(withEmail: login, password: password, completion: { authResult , error in
             if let error = error {
                 print("Failed login")

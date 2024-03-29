@@ -11,61 +11,67 @@ import UIKit
 
 class FavoriteService {
     
-    private let coreDataService: CoreDataService = CoreDataService()
+    let coreDataService: CoreDataServiceProtocol = CoreDataService()
     
-    private(set) var items: [PostCoreData] = []
+    private lazy var context = coreDataService.backgroundContext
     
-    init(){
-        fetch()
-    }
+    private(set) var currentFillter: String? = nil
     
+    
+//    func fetch(completion: @escaping () -> Void ) {
+//        context.perform{ [weak self] in
+//            guard let self else { return }
+//            let request = PostCoreData.fetchRequest()
+//            if let currentFillter {
+//                let predicate = NSPredicate(format: "author == %@", currentFillter)
+//                request.predicate = predicate
+//            }
+//            guard let newItems = try? context.fetch(request) else { return }
+//            items = newItems
+//            completion()
+//        }
+//    }
     
     func createNewPost(post: Post) {
         
-   
+//        guard items.contains(where: {
+//            Int($0.postId) == post.id
+//        }) == false else {
+//            print("already contains this post")
+//            return
+//        }
         
-        if items.contains(where: {
-            return Int($0.postId) == Int64(post.id)
-        }) {
-            print("Already have this post in favourite")
-            return
-        }
-        
-        let newPost = PostCoreData(context: coreDataService.context)
-        newPost.author = post.author
-        newPost.text = post.description
-        newPost.likes = Int64(post.like)
-        newPost.image = post.image
-        newPost.views = Int64(post.views)
-        newPost.postId = Int64(post.id)
-        
-        items.append(newPost)
-        
-        coreDataService.saveContext()
-    }
-    
-    func fetch(){
-        let request = PostCoreData.fetchRequest()
-        do {
-            items =  try coreDataService.context.fetch(request)
-        } catch {
-            print("Fetch error")
-            assertionFailure()
+        context.perform { [weak self] in
+            guard let self else { return }
+            
+            let newPost = PostCoreData(context: context)
+            newPost.image = post.image
+            newPost.author = post.author
+            newPost.text = post.description
+            newPost.likes = Int64(post.like)
+            newPost.views = Int64(post.views)
+            newPost.postId = Int64(post.id)
+            
+            do {
+                try context.save()
+            } catch {
+                print(error.localizedDescription)
+                assertionFailure()
+            }
         }
     }
     
-    func deleteItem(with id: Int) {
-        guard let item = items.first(where: {
-            $0.postId == id
-        }) else {
-            return
+    func deleteItem( item: PostCoreData){
+        context.perform{ [weak self] in
+            guard let self else { return }
+            
+            context.delete(item)
+            try? context.save()
         }
-        items = items.filter({
-            $0.postId != id
-        })
-        coreDataService.context.delete(item)
-        coreDataService.saveContext()
     }
-
+    
+    func setFilter(author: String?){
+        currentFillter = author
+    }
     
 }

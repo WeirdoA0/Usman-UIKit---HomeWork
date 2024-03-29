@@ -20,9 +20,9 @@ extension UserService {
         } else {
             closure(.failure(AppError.failedLoadModel))
         }
-        }
-    
     }
+    
+}
 
 
 public class AppUser {

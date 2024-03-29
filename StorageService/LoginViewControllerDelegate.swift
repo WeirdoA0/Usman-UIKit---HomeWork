@@ -7,8 +7,6 @@
 
 import Foundation
 public protocol LoginViewControllerDelegate {
-    
-    func check( login: String, password: String) throws -> Bool
 
     func singUp(login: String, password: String, completion: @escaping(Result<UserFirebase, Error>) -> Void)
     
