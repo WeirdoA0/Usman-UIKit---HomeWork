@@ -21,6 +21,7 @@
 		44C130B12B9B26B6009A5E6E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 44C130B02B9B26B6009A5E6E /* Realm */; };
 		44C130B32B9B26B6009A5E6E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 44C130B22B9B26B6009A5E6E /* RealmSwift */; };
 		44C130B52B9B2A47009A5E6E /* OverallJokeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C130B42B9B2A47009A5E6E /* OverallJokeListViewController.swift */; };
+		44D6C6132BBEB24100141910 /* SecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D6C6122BBEB24100141910 /* SecureStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		44C130A72B9B0B3E009A5E6E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		44C130A92B9B0CCD009A5E6E /* RealmJoke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmJoke.swift; sourceTree = "<group>"; };
 		44C130B42B9B2A47009A5E6E /* OverallJokeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverallJokeListViewController.swift; sourceTree = "<group>"; };
+		44D6C6122BBEB24100141910 /* SecureStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				44C130A72B9B0B3E009A5E6E /* NetworkService.swift */,
+				44D6C6122BBEB24100141910 /* SecureStorage.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44D6C6132BBEB24100141910 /* SecureStorage.swift in Sources */,
 				44C130B52B9B2A47009A5E6E /* OverallJokeListViewController.swift in Sources */,
 				44C130AA2B9B0CCD009A5E6E /* RealmJoke.swift in Sources */,
 				441857712AB1F3A0003F77CC /* LoadViewController.swift in Sources */,
