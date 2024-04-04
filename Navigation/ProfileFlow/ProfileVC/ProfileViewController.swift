@@ -90,20 +90,6 @@ class ProfileViewController: UIViewController {
         }
         eyeTimer.startTimer()
     }
-    
-    @objc func cellDidSelect(sender: AnyObject){
-
-    }
-    
-    private func addGestureForCell(cell: UITableViewCell){
-        let gesture = UITapGestureRecognizer(
-            target: self,
-            action: #selector(cellDidSelect)
-        )
-        gesture.numberOfTapsRequired = 1
-        cell.addGestureRecognizer(gesture)
-    }
-    
 }
 
 // MARK: Delegate

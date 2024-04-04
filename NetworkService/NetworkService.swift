@@ -15,9 +15,8 @@ public struct NetworkService {
         
         let dataTask = session.dataTask(with: request){data,response,erorr in
             if let erorr = erorr {
-                print("Conection error")
                 print(erorr.localizedDescription)
-                //The Internet connection appears to be offline.
+                return
             }
             if let HTTPSResopnse = response as? HTTPURLResponse {
                 switch HTTPSResopnse.statusCode {

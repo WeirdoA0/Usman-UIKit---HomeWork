@@ -29,7 +29,6 @@
 		441DC2592B9E069900F86CE9 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 441DC2572B9E069900F86CE9 /* Model.xcdatamodeld */; };
 		4420E9D42B48801E00532FF4 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442E405B2B4739900092A61A /* Error.swift */; };
 		442A0EFD2B13ED9100851992 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442A0EFC2B13ED9100851992 /* FeedModel.swift */; };
-		443094662B0285BA0082397C /* Cheker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443094652B0285BA0082397C /* Cheker.swift */; };
 		443094682B02FAC40082397C /* LoginViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443094672B02FAC40082397C /* LoginViewControllerDelegate.swift */; };
 		4430946A2B0301E30082397C /* LoginInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443094692B0301E30082397C /* LoginInspector.swift */; };
 		44476CB32B614A1F00E93819 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 44476CB22B614A1F00E93819 /* FirebaseAuth */; };
@@ -163,7 +162,6 @@
 		441DC2582B9E069900F86CE9 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		442A0EFC2B13ED9100851992 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		442E405B2B4739900092A61A /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
-		443094652B0285BA0082397C /* Cheker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cheker.swift; sourceTree = "<group>"; };
 		443094672B02FAC40082397C /* LoginViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegate.swift; sourceTree = "<group>"; };
 		443094692B0301E30082397C /* LoginInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInspector.swift; sourceTree = "<group>"; };
 		44476CB42B614BCB00E93819 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -262,7 +260,6 @@
 				44476CB62B615BFA00E93819 /* CheckerService.swift */,
 				442E405B2B4739900092A61A /* Error.swift */,
 				448DB1582B15A2DC00F53047 /* FeedViewDelegate.swift */,
-				443094652B0285BA0082397C /* Cheker.swift */,
 				443094672B02FAC40082397C /* LoginViewControllerDelegate.swift */,
 				4486D5A52AFAEB0700469365 /* UserService.swift */,
 				4486D5A32AFAEAF900469365 /* Post.swift */,
@@ -752,7 +749,6 @@
 				44053DE42AF8639F00984D35 /* StorageService.docc in Sources */,
 				44E370A62B062FF3001592DA /* LoginFactory.swift in Sources */,
 				4456C83D2B61987000083BB2 /* Model.swift in Sources */,
-				443094662B0285BA0082397C /* Cheker.swift in Sources */,
 				448DB1592B15A2DC00F53047 /* FeedViewDelegate.swift in Sources */,
 				443094682B02FAC40082397C /* LoginViewControllerDelegate.swift in Sources */,
 				4430946A2B0301E30082397C /* LoginInspector.swift in Sources */,
