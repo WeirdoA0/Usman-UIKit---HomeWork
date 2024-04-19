@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MapKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -16,19 +17,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: scene)
         
-        let profileViewController = ProfileViewController()
-        let feedViewController = FeedViewController()
-        let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [profileViewController,feedViewController].map {
-            UINavigationController(rootViewController: $0)
-        }
+        let mapView = MKMapView()
         
-        profileViewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profile"), tag: 1)
-        feedViewController.tabBarItem = UITabBarItem(title: "Feed", image: UIImage(named: "feed"), tag: 0)
+        let mapVC = UINavigationController(rootViewController: MapViewController(map: mapView))
+        let optionsVC = UINavigationController(rootViewController: OptionsViewController(map: mapView))
+        mapVC.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
+        optionsVC.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 1)
+        
+        let tabBarVC = UITabBarController()
+        tabBarVC.viewControllers = [mapVC, optionsVC]
 
-        tabBarController.selectedIndex = 0
-        
-        window.rootViewController = tabBarController
+        window.rootViewController = tabBarVC
         window.makeKeyAndVisible()
         self.window = window
     }

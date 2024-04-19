@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A36EC5D0-1496-423C-BF74-7430B1C9DF67"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C70B4DAF-D581-43B9-A876-5CD9C3C262AF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Navigation+Profile/ProfileHeaderView/ProfileHeaderView.swift"
+            startingColumnNumber = "20"
+            endingColumnNumber = "20"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "init(frame:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
