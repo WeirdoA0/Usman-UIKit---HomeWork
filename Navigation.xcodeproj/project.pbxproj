@@ -9,37 +9,27 @@
 /* Begin PBXBuildFile section */
 		4418576D2AB1F3A0003F77CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418576C2AB1F3A0003F77CC /* AppDelegate.swift */; };
 		4418576F2AB1F3A0003F77CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418576E2AB1F3A0003F77CC /* SceneDelegate.swift */; };
-		441857712AB1F3A0003F77CC /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441857702AB1F3A0003F77CC /* LoadViewController.swift */; };
 		441857762AB1F3A1003F77CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 441857752AB1F3A1003F77CC /* Assets.xcassets */; };
 		441857792AB1F3A1003F77CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441857772AB1F3A1003F77CC /* LaunchScreen.storyboard */; };
-		4422E1762B9CB6220083ADBD /* Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4422E1752B9CB6220083ADBD /* Publisher.swift */; };
-		4422E17B2B9CEAD00083ADBD /* GroupedJokesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4422E17A2B9CEAD00083ADBD /* GroupedJokesVC.swift */; };
-		4422E17D2B9CF2BA0083ADBD /* JokeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4422E17C2B9CF2BA0083ADBD /* JokeListViewController.swift */; };
-		44C130A12B9AF6B6009A5E6E /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C130A02B9AF6B6009A5E6E /* Joke.swift */; };
-		44C130A82B9B0B3E009A5E6E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C130A72B9B0B3E009A5E6E /* NetworkService.swift */; };
-		44C130AA2B9B0CCD009A5E6E /* RealmJoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C130A92B9B0CCD009A5E6E /* RealmJoke.swift */; };
-		44C130B12B9B26B6009A5E6E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 44C130B02B9B26B6009A5E6E /* Realm */; };
-		44C130B32B9B26B6009A5E6E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 44C130B22B9B26B6009A5E6E /* RealmSwift */; };
-		44C130B52B9B2A47009A5E6E /* OverallJokeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C130B42B9B2A47009A5E6E /* OverallJokeListViewController.swift */; };
-		44D6C6132BBEB24100141910 /* SecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D6C6122BBEB24100141910 /* SecureStorage.swift */; };
+		444F8BF72BCFC88200A47219 /* RouteBtnState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444F8BF62BCFC88200A47219 /* RouteBtnState.swift */; };
+		445A33262BCFD147002C7C84 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445A33252BCFD147002C7C84 /* OptionsViewController.swift */; };
+		445A33282BCFD3DD002C7C84 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445A33272BCFD3DD002C7C84 /* File.swift */; };
+		4467ECC52BCBE08A007FE011 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4467ECC42BCBE08A007FE011 /* MapViewController.swift */; };
+		44C0B8A42BCBEA5200ECA4E1 /* ViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C0B8A32BCBEA5200ECA4E1 /* ViewController + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		441857692AB1F3A0003F77CC /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4418576C2AB1F3A0003F77CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4418576E2AB1F3A0003F77CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		441857702AB1F3A0003F77CC /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
 		441857752AB1F3A1003F77CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		441857782AB1F3A1003F77CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4418577A2AB1F3A1003F77CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4422E1752B9CB6220083ADBD /* Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publisher.swift; sourceTree = "<group>"; };
-		4422E17A2B9CEAD00083ADBD /* GroupedJokesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedJokesVC.swift; sourceTree = "<group>"; };
-		4422E17C2B9CF2BA0083ADBD /* JokeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeListViewController.swift; sourceTree = "<group>"; };
-		44C130A02B9AF6B6009A5E6E /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
-		44C130A72B9B0B3E009A5E6E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		44C130A92B9B0CCD009A5E6E /* RealmJoke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmJoke.swift; sourceTree = "<group>"; };
-		44C130B42B9B2A47009A5E6E /* OverallJokeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverallJokeListViewController.swift; sourceTree = "<group>"; };
-		44D6C6122BBEB24100141910 /* SecureStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStorage.swift; sourceTree = "<group>"; };
+		444F8BF62BCFC88200A47219 /* RouteBtnState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteBtnState.swift; sourceTree = "<group>"; };
+		445A33252BCFD147002C7C84 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		445A33272BCFD3DD002C7C84 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		4467ECC42BCBE08A007FE011 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		44C0B8A32BCBEA5200ECA4E1 /* ViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,14 +37,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44C130B32B9B26B6009A5E6E /* RealmSwift in Frameworks */,
-				44C130B12B9B26B6009A5E6E /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4414887F2BCFE7B3007D4A9C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4467ECC42BCBE08A007FE011 /* MapViewController.swift */,
+				445A33252BCFD147002C7C84 /* OptionsViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		441857602AB1F3A0003F77CC = {
 			isa = PBXGroup;
 			children = (
@@ -74,38 +71,25 @@
 		4418576B2AB1F3A0003F77CC /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				4418576C2AB1F3A0003F77CC /* AppDelegate.swift */,
-				4418576E2AB1F3A0003F77CC /* SceneDelegate.swift */,
-				441857702AB1F3A0003F77CC /* LoadViewController.swift */,
-				44C130B42B9B2A47009A5E6E /* OverallJokeListViewController.swift */,
-				4422E17A2B9CEAD00083ADBD /* GroupedJokesVC.swift */,
-				4422E17C2B9CF2BA0083ADBD /* JokeListViewController.swift */,
-				441857752AB1F3A1003F77CC /* Assets.xcassets */,
+				4414887F2BCFE7B3007D4A9C /* ViewControllers */,
+				444F8BF62BCFC88200A47219 /* RouteBtnState.swift */,
+				44C0B8A32BCBEA5200ECA4E1 /* ViewController + Extension.swift */,
+				448216752AE9514E00BA3C25 /* App */,
 				441857772AB1F3A1003F77CC /* LaunchScreen.storyboard */,
+				441857752AB1F3A1003F77CC /* Assets.xcassets */,
 				4418577A2AB1F3A1003F77CC /* Info.plist */,
-				44C130AB2B9B0CE5009A5E6E /* Model */,
-				44C130AC2B9B0E23009A5E6E /* Service */,
-				4422E1752B9CB6220083ADBD /* Publisher.swift */,
+				445A33272BCFD3DD002C7C84 /* File.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
 		};
-		44C130AB2B9B0CE5009A5E6E /* Model */ = {
+		448216752AE9514E00BA3C25 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				44C130A02B9AF6B6009A5E6E /* Joke.swift */,
-				44C130A92B9B0CCD009A5E6E /* RealmJoke.swift */,
+				4418576E2AB1F3A0003F77CC /* SceneDelegate.swift */,
+				4418576C2AB1F3A0003F77CC /* AppDelegate.swift */,
 			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		44C130AC2B9B0E23009A5E6E /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				44C130A72B9B0B3E009A5E6E /* NetworkService.swift */,
-				44D6C6122BBEB24100141910 /* SecureStorage.swift */,
-			);
-			path = Service;
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,10 +108,6 @@
 			dependencies = (
 			);
 			name = Navigation;
-			packageProductDependencies = (
-				44C130B02B9B26B6009A5E6E /* Realm */,
-				44C130B22B9B26B6009A5E6E /* RealmSwift */,
-			);
 			productName = Navigation;
 			productReference = 441857692AB1F3A0003F77CC /* Navigation.app */;
 			productType = "com.apple.product-type.application";
@@ -156,9 +136,6 @@
 				Base,
 			);
 			mainGroup = 441857602AB1F3A0003F77CC;
-			packageReferences = (
-				44C130AF2B9B26B6009A5E6E /* XCRemoteSwiftPackageReference "realm-swift" */,
-			);
 			productRefGroup = 4418576A2AB1F3A0003F77CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -185,17 +162,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44D6C6132BBEB24100141910 /* SecureStorage.swift in Sources */,
-				44C130B52B9B2A47009A5E6E /* OverallJokeListViewController.swift in Sources */,
-				44C130AA2B9B0CCD009A5E6E /* RealmJoke.swift in Sources */,
-				441857712AB1F3A0003F77CC /* LoadViewController.swift in Sources */,
-				4422E17D2B9CF2BA0083ADBD /* JokeListViewController.swift in Sources */,
-				4422E1762B9CB6220083ADBD /* Publisher.swift in Sources */,
-				44C130A82B9B0B3E009A5E6E /* NetworkService.swift in Sources */,
-				44C130A12B9AF6B6009A5E6E /* Joke.swift in Sources */,
+				44C0B8A42BCBEA5200ECA4E1 /* ViewController + Extension.swift in Sources */,
 				4418576D2AB1F3A0003F77CC /* AppDelegate.swift in Sources */,
+				445A33282BCFD3DD002C7C84 /* File.swift in Sources */,
+				444F8BF72BCFC88200A47219 /* RouteBtnState.swift in Sources */,
+				445A33262BCFD147002C7C84 /* OptionsViewController.swift in Sources */,
+				4467ECC52BCBE08A007FE011 /* MapViewController.swift in Sources */,
 				4418576F2AB1F3A0003F77CC /* SceneDelegate.swift in Sources */,
-				4422E17B2B9CEAD00083ADBD /* GroupedJokesVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +236,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -317,7 +290,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -336,6 +309,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Navigation/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please provide acces to your geolocation";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -347,9 +321,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Netology.Navigation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -362,6 +340,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Navigation/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please provide acces to your geolocation";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -373,9 +352,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Netology.Navigation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -401,30 +384,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		44C130AF2B9B26B6009A5E6E /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		44C130B02B9B26B6009A5E6E /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 44C130AF2B9B26B6009A5E6E /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = Realm;
-		};
-		44C130B22B9B26B6009A5E6E /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 44C130AF2B9B26B6009A5E6E /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 441857612AB1F3A0003F77CC /* Project object */;
 }
