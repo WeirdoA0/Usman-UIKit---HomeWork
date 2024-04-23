@@ -12,11 +12,12 @@ class ProfileHeaderView: UITableViewHeaderFooterView{
     
     weak var parent:  UIViewController?
     private var initialCenter: CGPoint?
+
     
     // MARK: Subviews
     
     
-    private lazy var button: CustomButton = CustomButton(title: "Show status", textColor: .white, backColor: .blue){ [weak self ] in
+    private lazy var button: CustomButton = CustomButton(title: NSLocalizedString("Show status", comment: ""), textColor: .white, backColor: .blue){ [weak self ] in
         self?.showButtonPressed()
         
     }
@@ -52,7 +53,7 @@ class ProfileHeaderView: UITableViewHeaderFooterView{
         field.backgroundColor = .systemBackground
         field.textColor = .black
         field.font = field.font?.withSize(15)
-        field.placeholder = "Set status here"
+        field.placeholder = NSLocalizedString("Set status", comment: "")
         
         field.layer.cornerRadius = 12
         field.layer.masksToBounds = true
@@ -218,19 +219,19 @@ class ProfileHeaderView: UITableViewHeaderFooterView{
         let prnt = parent as! ProfileViewController
         let viewmodel = prnt.viewModel!
         
-        if button.titleLabel!.text == "Show status"{
+        if button.titleLabel!.text == NSLocalizedString("Show status", comment: ""){
             print (viewmodel.user.status)
         } else {
             viewmodel.updateUser(
                 userData: .status(changeField.text ?? ""))
             
             changeField.text = ""
-            button.setTitle("Show status", for: .normal)
+            button.setTitle(NSLocalizedString("Show status", comment: ""), for: .normal)
         }
     }
     
     @objc func statusTextChanged(){
-        button.setTitle("Set status", for: .normal)
+        button.setTitle(NSLocalizedString("Set status", comment: ""), for: .normal)
         
     }
     
@@ -238,7 +239,6 @@ class ProfileHeaderView: UITableViewHeaderFooterView{
     
     @objc func launchAnimation() {
         
-        print("Tap is done")
         self.initialCenter = self.avatar.center
         
         (parent!.view.subviews.first! as! UITableView).isScrollEnabled = false
@@ -284,7 +284,6 @@ class ProfileHeaderView: UITableViewHeaderFooterView{
     
     
     @objc func undoAnimation() {
-        print("Tap 2 is done")
         
         (parent!.view.subviews.first! as! UITableView).isScrollEnabled = true
         (parent!.view.subviews.first! as! UITableView).cellForRow(at: IndexPath(item: 0, section: 0))?.isUserInteractionEnabled = true

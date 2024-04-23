@@ -126,16 +126,24 @@ class PostTableViewCell: UITableViewCell {
         
     }
     
+    private func pluralsText(type: String, count: Int) -> String {
+        let format = NSLocalizedString(type,tableName: "Plurals", comment: "")
+        let text = String(format: format, count)
+        return text
+    }
+
+    
     // MARK: Update
 
     internal func update(model: Post) {
         
-        
         headerLabel.text = model.author
         postPicture.image = UIImage(named: model.image)
         text.text = model.description
-        likesBar.text = "Likes: " + String(model.like)
-        viewsBar.text = "Views: " + String(model.views)
+ 
+        likesBar.text = pluralsText(type: "NumberOfLikes", count: model.like)
+        
+        viewsBar.text = pluralsText(type: "NumberOfViews", count: model.views)
         
     }
 

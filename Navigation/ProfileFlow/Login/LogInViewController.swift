@@ -87,8 +87,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         text.returnKeyType = UIReturnKeyType.done
         text.contentVerticalAlignment = .center
         
-        
-        text.placeholder = "Email or phone"
+        text.placeholder = NSLocalizedString("Email or phone", comment: "")
         text.text = "login@gmail.com"
         
         text.delegate = self
@@ -111,7 +110,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         text.contentVerticalAlignment = .center
         text.text = "qwerty"
         
-        text.placeholder = "Password"
+        text.placeholder = NSLocalizedString("Password", comment: "")
         text.isSecureTextEntry = true
         
         text.delegate = self
@@ -119,11 +118,11 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         return text
     }()
     
-    private lazy var signUpBtn = CustomButton(title: "Sign up", textColor: .white, backColor: nil, closure: { [weak self] in
+    private lazy var signUpBtn = CustomButton(title: NSLocalizedString("Sign Up", comment: ""), textColor: .white, backColor: nil, closure: { [weak self] in
         self?.signUpPressed()
     })
     
-    private lazy var loginButton: CustomButton = CustomButton(title: "Log in", textColor: .white, backColor: nil){ [weak self] in
+    private lazy var loginButton: CustomButton = CustomButton(title: NSLocalizedString("Log in", comment: ""), textColor: .white, backColor: nil){ [weak self] in
         self?.logInPressed()
     }
     
@@ -255,7 +254,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Private
     private func pullAnError() {
-        let alert = UIAlertController(title: "Incorrect login or password", message: "Enter correct login and password", preferredStyle: .alert)
+        let alert = UIAlertController(title: NSLocalizedString("Incorrect login or password", comment: ""), message: NSLocalizedString("Enter correct login and password", comment: ""), preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         self.present(alert, animated: true)
     }
@@ -281,7 +280,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         loginDelegate?.checkCredentials(login: loginField.text!, password: passwordField.text!, completion: { [weak self] result in
             switch result{
             case .failure(let error):
-                self?.makeAlert(title: "An error ocсured", message: error.localizedDescription)
+                self?.makeAlert(title: NSLocalizedString("An error occured", comment: ""), message: error.localizedDescription)
             case .success(let user):
                 print(user.user.uid)
                 
@@ -312,7 +311,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         loginDelegate?.singUp(login: loginField.text!, password: passwordField.text!, completion: { [weak self] result in
             switch result{
             case .failure(let error):
-                self?.makeAlert(title: "An error ocсured", message: error.localizedDescription)
+                self?.makeAlert(title: NSLocalizedString("An error occured", comment: ""), message: error.localizedDescription)
             case .success(let user):
                 print(user.user.uid + " signedUp")
 

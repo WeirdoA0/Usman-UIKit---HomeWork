@@ -1,0 +1,289 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "An error occured" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Произошла ошибка"
+          }
+        }
+      }
+    },
+    "Another thing was done" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Другое действие сделано"
+          }
+        }
+      }
+    },
+    "Button" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кнопка"
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отменить"
+          }
+        }
+      }
+    },
+    "Check" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Проверить"
+          }
+        }
+      }
+    },
+    "Confirm" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подтвердить"
+          }
+        }
+      }
+    },
+    "Do another thing" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сделать другое действие"
+          }
+        }
+      }
+    },
+    "Do one thing" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сделать первое действие"
+          }
+        }
+      }
+    },
+    "Email or phone" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Телефон или почта"
+          }
+        }
+      }
+    },
+    "Enter correct login and password" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите правильный логин и пароль"
+          }
+        }
+      }
+    },
+    "Feed" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Лента"
+          }
+        }
+      }
+    },
+    "Filter by author name" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отфильтровать по имени автора"
+          }
+        }
+      }
+    },
+    "Incorrect login or password" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Неправильный логин или пароль"
+          }
+        }
+      }
+    },
+    "Log in" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Войти в аккаунт "
+          }
+        }
+      }
+    },
+    "Long usage of phone leads to eye strain, constant eye strain may affect on your vision" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Долгое использование телефона вызывает напряжение в глазах , которое может способствовать ухудшению зрения "
+          }
+        }
+      }
+    },
+    "One thing was done" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Первое действие сделано"
+          }
+        }
+      }
+    },
+    "Password" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пароль"
+          }
+        }
+      }
+    },
+    "Photo Gallery" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фото галерея"
+          }
+        }
+      }
+    },
+    "Photos" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фотографии"
+          }
+        }
+      }
+    },
+    "Print here" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вписать здесь "
+          }
+        }
+      }
+    },
+    "Profile" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Профиль"
+          }
+        }
+      }
+    },
+    "Set status" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Установить статус"
+          }
+        }
+      }
+    },
+    "Show status" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показать статус"
+          }
+        }
+      }
+    },
+    "Sign Up" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Создать аккаунт"
+          }
+        }
+      }
+    },
+    "Some Alert" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Некоторая тревога"
+          }
+        }
+      }
+    },
+    "Take care of your eye" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Берегите ваше зрение."
+          }
+        }
+      }
+    },
+    "Tatooine period is equal to: " : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Период обращения Татуина равен:"
+          }
+        }
+      }
+    },
+    "Training Alert" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Учебная тревога"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

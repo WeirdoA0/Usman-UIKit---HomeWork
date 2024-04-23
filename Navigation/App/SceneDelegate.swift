@@ -27,24 +27,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let logInViewController = LogInViewController()
         let feedViewController = FeedViewController()
-        let multMediadeiaVC = MultimediaVeiwController()
         let favoritesVC = FavoritesViewController()
         
         let tabBarController = UITabBarController()
         
-        tabBarController.viewControllers = [multMediadeiaVC,feedViewController,logInViewController, favoritesVC].map {
+        tabBarController.viewControllers = [feedViewController,logInViewController, favoritesVC].map {
             UINavigationController(rootViewController: $0)
         }
         
-        logInViewController.tabBarItem = UITabBarItem(title: "Profile", image: resizeImage(image: UIImage(named: "profile")!, targetSize: CGSize(width: 30, height: 30)), tag: 2)
-        feedViewController.tabBarItem = UITabBarItem(title: "Feed", image: resizeImage(image: UIImage(named: "feed")!, targetSize: CGSize(width: 30, height: 30)), tag: 1)
-        multMediadeiaVC.tabBarItem = UITabBarItem(title: "Media", image: resizeImage(image: UIImage(named: "multimedia")!, targetSize: CGSize(width: 30, height: 30)), tag: 0)
-        favoritesVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 3)
+        logInViewController.tabBarItem = UITabBarItem(title: "Profile".localizeed(), image: resizeImage(image: UIImage(named: "profile")!, targetSize: CGSize(width: 30, height: 30)), tag: 1)
+        feedViewController.tabBarItem = UITabBarItem(title: "Feed".localizeed(), image: resizeImage(image: UIImage(named: "feed")!, targetSize: CGSize(width: 30, height: 30)), tag: 0)
+        favoritesVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
         
         logInViewController.loginDelegate = MyLoginFactory().makeLoginInspector()
         
         
-        tabBarController.selectedIndex = 2
+        tabBarController.selectedIndex = 1
         
         tabBarController.tabBar.backgroundColor = .white
         

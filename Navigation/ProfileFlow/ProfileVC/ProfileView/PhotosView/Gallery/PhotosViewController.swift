@@ -58,7 +58,7 @@ class PhotosViewController: UIViewController {
     // MARK: Private
     private func setView() {
         view.backgroundColor = .white
-        title = "Photo Gallery"
+        title = "Photo Gallery".localizeed()
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.barStyle = .default
     }

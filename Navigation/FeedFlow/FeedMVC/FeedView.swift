@@ -15,14 +15,14 @@ class FeedView: UIView {
     //MARK: StackView
     
     private lazy var btn: CustomButton = CustomButton(
-        title: "New Button",
+        title: NSLocalizedString("Button", comment: ""),
         textColor: .white,
         backColor: .purple) { [weak self] in
             self?.delegate!.push()
         }
     
     private lazy var btn1: CustomButton =  CustomButton(
-        title: "New Button",
+        title: NSLocalizedString("Button", comment: ""),
         textColor: .white,
         backColor: .purple) { [weak self] in
         self?.delegate!.push()
@@ -61,7 +61,7 @@ class FeedView: UIView {
         field.translatesAutoresizingMaskIntoConstraints = false
         field.backgroundColor = .systemGray4
         field.textColor = .black
-        field.placeholder = "Print here"
+        field.placeholder = NSLocalizedString("Print here", comment: "")
         field.text = "Word"
         
         field.layer.cornerRadius = 10
@@ -70,7 +70,7 @@ class FeedView: UIView {
         return field
     }()
     private lazy var checkGuessButton: CustomButton = CustomButton(
-        title: "Check",
+        title: NSLocalizedString("Check", comment: ""),
         textColor: .white,
         backColor: .systemBlue) { [weak self] in
             print("Tap is done")

@@ -82,28 +82,15 @@ class ProfileViewController: UIViewController {
     private func startEyeTimer(){
         let eyeTimer = AlertWithTimer(
             period: 5,
-            title: "Take care of your eye",
-            text: "Long usage of phone leads to eye strain, constant eye strain may affect on your vision")
+            title: "Take care of your eye".localizeed() ,
+            text: "Long usage of phone leads to eye strain, constant eye strain may affect on your vision".localizeed()
+            )
         
         eyeTimer.completion = { [weak self] in
             self?.present(eyeTimer.alertWindow, animated: true)
         }
         eyeTimer.startTimer()
     }
-    
-    @objc func cellDidSelect(sender: AnyObject){
-
-    }
-    
-    private func addGestureForCell(cell: UITableViewCell){
-        let gesture = UITapGestureRecognizer(
-            target: self,
-            action: #selector(cellDidSelect)
-        )
-        gesture.numberOfTapsRequired = 1
-        cell.addGestureRecognizer(gesture)
-    }
-    
 }
 
 // MARK: Delegate

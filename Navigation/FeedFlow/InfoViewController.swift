@@ -67,10 +67,10 @@ class InfoViewController: UIViewController{
     //MARK: Interactive
     
     @objc private func buttonPressed() {
-        let alertController = UIAlertController(title: "Some Alert", message: "Training Alert", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Do one thing", style: .default, handler: {action in print("One thing was done")}
+        let alertController = UIAlertController(title: NSLocalizedString("Some Alert", comment: ""), message: NSLocalizedString("Training Alert", comment: ""), preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("Do one thing", comment: ""), style: .default, handler: {action in print(NSLocalizedString("One thing was done", comment: ""))}
                                                ))
-        alertController.addAction(UIAlertAction(title: "Do another thing", style: .default, handler: {action in print("Another thing was done")}
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("Do another thing", comment: ""), style: .default, handler: {action in print(NSLocalizedString("Another thing was done", comment: ""))}
                                                ))
         present(alertController,animated: true)
     }
@@ -114,7 +114,7 @@ class InfoViewController: UIViewController{
         netwrokService.fetchTatooine(
             handlePeriod: { [weak self]  period in
             DispatchQueue.main.async {
-                self?.periodLabel.text = "Tatooine period is equal to: " + period
+                self?.periodLabel.text =     NSLocalizedString("Tatooine period is equal to: ", comment: "") + period
             }
         }, handleResident: { [weak self] name in
             self?.cachedNames.append(name)

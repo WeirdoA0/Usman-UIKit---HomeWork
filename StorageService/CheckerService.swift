@@ -38,6 +38,7 @@ class CheckerService: CheckerServiceProtocol {
             if let error = error {
                 print("Failed login")
                 completion(.failure(error))
+                return
             }
             if let authResult = authResult {
                 let user = authResult.user

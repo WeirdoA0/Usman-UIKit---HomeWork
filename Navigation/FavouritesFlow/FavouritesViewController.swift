@@ -78,18 +78,18 @@ class FavoritesViewController: UIViewController {
     }
     
     @objc func alertBtnDidTap(){
-        let alert = UIAlertController(title: "Filter by author name", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: NSLocalizedString("Filter by author name", comment: ""), message: nil, preferredStyle: .alert)
         alert.addTextField()
         let textField: UITextField = (alert.textFields![0])
         textField.text = authors.randomElement() ?? ""
-        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { [weak self] _ in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Confirm", comment: ""), style: .default, handler: { [weak self] _ in
             guard let text = textField.text else { return }
             let predicate = NSPredicate(format: "author == %@", text)
             self?.fetchedResultController.fetchRequest.predicate = predicate
             self?.fetch()
             self?.tableView.reloadData()
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel))
         present(alert, animated: true)
     }
     

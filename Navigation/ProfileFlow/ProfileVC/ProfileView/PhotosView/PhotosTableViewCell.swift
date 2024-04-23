@@ -43,7 +43,7 @@ class PhotosTableViewCell: UITableViewCell {
        let lbl = UILabel()
         
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.text = "Photos"
+        lbl.text = NSLocalizedString("Photos", comment: "")
         lbl.textColor = .black
         lbl.font = UIFont.systemFont(ofSize: 24,weight: .bold)
         lbl.sizeToFit()
