@@ -17,6 +17,7 @@ class PhotosTableViewCell: UITableViewCell {
     private lazy var collection: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collection.backgroundColor = .customViewBackGroundColor
         
         collection.translatesAutoresizingMaskIntoConstraints = false
         
@@ -53,7 +54,7 @@ class PhotosTableViewCell: UITableViewCell {
 
     private lazy var space: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemGray5
+        view.backgroundColor = .customControllerBackGroundColor
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
@@ -74,7 +75,7 @@ class PhotosTableViewCell: UITableViewCell {
     }
 
     private func tuneView() {
-        backgroundColor = .white
+        contentView.backgroundColor = .customViewBackGroundColor
     }
     
     private func addSubviews() {

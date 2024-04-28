@@ -30,6 +30,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.frame = view.bounds
+        view.backgroundColor = .customViewBackGroundColor
         
         return view
     }()
@@ -76,10 +77,9 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         let text = UITextField()
         text.translatesAutoresizingMaskIntoConstraints = false
         
-        text.backgroundColor = .systemGray6
-        text.textColor = .black
+        text.backgroundColor = .customViewBackGroundColor
         text.font = UIFont.systemFont(ofSize: 16)
-        text.tintColor = .gray
+        text.tintColor = .customTintColor
         text.autocapitalizationType = .none
         
         text.keyboardType = UIKeyboardType.default
@@ -98,10 +98,9 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         let text = UITextField()
         text.translatesAutoresizingMaskIntoConstraints = false
         
-        text.backgroundColor = .systemGray6
-        text.textColor = .black
+        text.backgroundColor = .customViewBackGroundColor
+        text.textColor = .customTintColor
         text.font = UIFont.systemFont(ofSize: 16)
-        text.tintColor = .gray
         text.autocapitalizationType = .none
         
         text.keyboardType = UIKeyboardType.default
@@ -150,7 +149,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: SetView
     private func setView() {
-        view.backgroundColor = .white
+        view.backgroundColor = .customControllerBackGroundColor
     }
     //MARK: addSubviews
     private func addSubviews() {

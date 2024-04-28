@@ -18,6 +18,7 @@ class CellForPhotosTableViewCell: UICollectionViewCell {
     private lazy var picture: UIImageView = {
        let img = UIImageView()
         img.translatesAutoresizingMaskIntoConstraints = false
+        img.backgroundColor = .customViewBackGroundColor
         
         return img
     }()
@@ -33,7 +34,7 @@ class CellForPhotosTableViewCell: UICollectionViewCell {
         setConstraints()
     }
     private func setView() {
-        contentView.backgroundColor = .systemGray5
+        contentView.backgroundColor = .customViewBackGroundColor
         contentView.clipsToBounds = true
         contentView.layer.cornerRadius = Constants.cornerRadius
     }

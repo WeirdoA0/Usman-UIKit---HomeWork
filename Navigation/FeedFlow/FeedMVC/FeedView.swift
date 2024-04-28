@@ -59,8 +59,8 @@ class FeedView: UIView {
     private lazy var field: UITextField = {
         let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
-        field.backgroundColor = .systemGray4
-        field.textColor = .black
+        field.backgroundColor = .customViewBackGroundColor
+        field.textColor = .customTintColor
         field.placeholder = NSLocalizedString("Print here", comment: "")
         field.text = "Word"
         
@@ -89,7 +89,7 @@ class FeedView: UIView {
         addSubviews()
         setConstraintsAndSetSubviews()
         setNotifications()
-        backgroundColor = .white
+        backgroundColor = .customViewBackGroundColor
     }
     
     required init?(coder: NSCoder) {

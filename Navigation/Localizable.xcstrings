@@ -143,6 +143,7 @@
       }
     },
     "Long usage of phone leads to eye strain, constant eye strain may affect on your vision" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
@@ -255,6 +256,7 @@
       }
     },
     "Take care of your eye" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ru" : {
           "stringUnit" : {

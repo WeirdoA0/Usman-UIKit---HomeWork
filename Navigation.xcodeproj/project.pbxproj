@@ -47,6 +47,7 @@
 		44879C782AEB2D7C007FA135 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44879C772AEB2D7C007FA135 /* PhotosCollectionViewCell.swift */; };
 		448DB1552B159E7C00F53047 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448DB1542B159E7C00F53047 /* FeedView.swift */; };
 		448DB1592B15A2DC00F53047 /* FeedViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448DB1582B15A2DC00F53047 /* FeedViewDelegate.swift */; };
+		449289272BD924200056B0ED /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449289262BD924200056B0ED /* UIColor+Extension.swift */; };
 		4494F38E2B0E288000E8B904 /* ResizeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494F38D2B0E288000E8B904 /* ResizeImage.swift */; };
 		4494F3902B0E289900E8B904 /* MakeUIImageArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494F38F2B0E289900E8B904 /* MakeUIImageArray.swift */; };
 		4499DC9D2AE8948D0057EF73 /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4499DC9C2AE8948D0057EF73 /* PhotosTableViewCell.swift */; };
@@ -168,6 +169,7 @@
 		44879C772AEB2D7C007FA135 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		448DB1542B159E7C00F53047 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		448DB1582B15A2DC00F53047 /* FeedViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewDelegate.swift; sourceTree = "<group>"; };
+		449289262BD924200056B0ED /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		4494F38D2B0E288000E8B904 /* ResizeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeImage.swift; sourceTree = "<group>"; };
 		4494F38F2B0E289900E8B904 /* MakeUIImageArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeUIImageArray.swift; sourceTree = "<group>"; };
 		4499DC9C2AE8948D0057EF73 /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				440F5CEE2B9DEEC100E92F67 /* UIVC+Extension.swift */,
 				44CA522D2BA076E20037923C /* PostCoreData+Extension.swift */,
 				44F8FB2C2BD8271C007CBB10 /* String+Extension.swift */,
+				449289262BD924200056B0ED /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -717,6 +720,7 @@
 				44A8A4C22B1F2A4300B88FF5 /* ProfileViewModel.swift in Sources */,
 				4418576D2AB1F3A0003F77CC /* AppDelegate.swift in Sources */,
 				44CA522E2BA076E20037923C /* PostCoreData+Extension.swift in Sources */,
+				449289272BD924200056B0ED /* UIColor+Extension.swift in Sources */,
 				442A0EFD2B13ED9100851992 /* FeedModel.swift in Sources */,
 				441857832AB1F443003F77CC /* FeedViewController.swift in Sources */,
 				4494F38E2B0E288000E8B904 /* ResizeImage.swift in Sources */,

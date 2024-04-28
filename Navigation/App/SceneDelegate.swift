@@ -35,6 +35,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             UINavigationController(rootViewController: $0)
         }
         
+        
         logInViewController.tabBarItem = UITabBarItem(title: "Profile".localizeed(), image: resizeImage(image: UIImage(named: "profile")!, targetSize: CGSize(width: 30, height: 30)), tag: 1)
         feedViewController.tabBarItem = UITabBarItem(title: "Feed".localizeed(), image: resizeImage(image: UIImage(named: "feed")!, targetSize: CGSize(width: 30, height: 30)), tag: 0)
         favoritesVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)

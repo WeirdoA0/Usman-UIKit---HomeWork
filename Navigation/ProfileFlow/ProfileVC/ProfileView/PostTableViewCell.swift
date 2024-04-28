@@ -18,7 +18,8 @@ class PostTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-        label.textColor = .black
+        label.textColor = .customTintColor
+        label.backgroundColor = .customViewBackGroundColor
         label.numberOfLines = 2
         
         
@@ -30,7 +31,7 @@ class PostTableViewCell: UITableViewCell {
         let image = UIImageView(image: nil)
         image.translatesAutoresizingMaskIntoConstraints = false
         image.contentMode = .scaleAspectFit
-        image.backgroundColor = .black
+        image.backgroundColor = .customViewBackGroundColor
         
         return image
     }()
@@ -41,9 +42,9 @@ class PostTableViewCell: UITableViewCell {
         text.translatesAutoresizingMaskIntoConstraints = false
         
         text.font = UIFont.systemFont(ofSize: 14)
-        text.textColor = .systemGray
+        text.textColor = .customTintColor
         text.numberOfLines = 0
-        
+        text.backgroundColor = .customViewBackGroundColor
         
         text.sizeToFit()
 
@@ -55,7 +56,8 @@ class PostTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         
         label.font = UIFont.systemFont(ofSize: 16)
-        label.textColor = .black
+        label.textColor = .customTintColor
+        label.backgroundColor = .customViewBackGroundColor
         
         return label
     }()
@@ -65,7 +67,8 @@ class PostTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         
         label.font = UIFont.systemFont(ofSize: 16)
-        label.textColor = .black
+        label.textColor = .customTintColor
+        label.backgroundColor = .customViewBackGroundColor
         
         return label
     }()
@@ -78,7 +81,7 @@ class PostTableViewCell: UITableViewCell {
         tuneView()
         addSubviews()
         setConstraints()
-    
+        contentView.backgroundColor = .customViewBackGroundColor
     }
     
     required init?(coder: NSCoder) {

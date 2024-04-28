@@ -31,7 +31,7 @@ class PhotosViewController: UIViewController {
         let cltn = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
         cltn.translatesAutoresizingMaskIntoConstraints = false
-        
+//        cltn.backgroundColor = .
         cltn.register(PhotosCollectionViewCell.self, forCellWithReuseIdentifier: PhotosCollectionViewCell.identifier)
         
         //MARK: Uncomment later
@@ -57,7 +57,7 @@ class PhotosViewController: UIViewController {
     
     // MARK: Private
     private func setView() {
-        view.backgroundColor = .white
+        view.backgroundColor = .customControllerBackGroundColor
         title = "Photo Gallery".localizeed()
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.barStyle = .default

@@ -26,7 +26,7 @@ class FavoritesViewController: UIViewController {
     private lazy var tableView: UITableView = {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
-        table.backgroundColor = .systemGray6
+        table.backgroundColor = .customControllerBackGroundColor
         table.register(PostTableViewCell.self, forCellReuseIdentifier: .cellReuseId)
         
         table.delegate = self
@@ -47,7 +47,7 @@ class FavoritesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .systemGray6
+        self.view.backgroundColor = .customControllerBackGroundColor
         setupNavigationItems()
         fetch()
         layout()

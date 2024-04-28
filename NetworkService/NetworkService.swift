@@ -14,7 +14,7 @@ public struct NetworkService {
         let request: URLRequest = URLRequest(url: url)
         
         let dataTask = session.dataTask(with: request){data,response,erorr in
-            if let erorr = erorr {
+            if let erorr  {
                 print(erorr.localizedDescription)
                 return
             }

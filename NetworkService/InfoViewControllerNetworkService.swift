@@ -22,7 +22,8 @@ public class InfoViewControllerNetworkService {
         let request = URLRequest(url: url)
         let dataTask = URLSession.shared.dataTask(with: request){data,response,error in
             if error != nil {
-                fatalError("Connection error")
+                print("Connection error")
+                return
             }
             guard let HTTPResopnse = response as? HTTPURLResponse else {
                 fatalError("No response")
@@ -60,7 +61,8 @@ public class InfoViewControllerNetworkService {
         let decoder = JSONDecoder()
         let dataTask = URLSession.shared.dataTask(with: request){data,response,error in
             if error != nil {
-                fatalError("Connection error")
+                print("Connection error")
+                return
                 
             }
             guard let HTTPResopnse = response as? HTTPURLResponse else {
@@ -104,6 +106,7 @@ public class InfoViewControllerNetworkService {
                 let decoder = JSONDecoder()
                 if error != nil {
                     print("Connection error")
+                    return
                 }
                 guard let HTTPResopnse = response as? HTTPURLResponse else {
                     print("no response")

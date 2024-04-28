@@ -17,14 +17,15 @@ class ProfileViewController: UIViewController {
     
     private lazy var tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .plain)
+
         
         table.translatesAutoresizingMaskIntoConstraints = false
-        table.backgroundColor = .systemBackground
-        
         table.showsVerticalScrollIndicator = true
         
         table.contentInset.bottom = navigationController?.navigationBar.frame.height ?? 0
         
+        table.delegate = self
+        table.dataSource = self
         
         return table
     }()
@@ -50,7 +51,7 @@ class ProfileViewController: UIViewController {
         #if DEBUG
         view.backgroundColor = .red
         #else
-        view.backgroundColor = .white
+        view.backgroundColor = .customControllerBackGroundColor
         #endif
     }
     private func addSubviews() {
@@ -65,19 +66,17 @@ class ProfileViewController: UIViewController {
             tableView.topAnchor.constraint(equalTo: safeArea.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor)
         ])
+
     }
     private func setTableView() {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
         
-        tableView.backgroundColor = .systemBackground
+        tableView.backgroundColor = .customControllerBackGroundColor
         
         tableView.register(PostTableViewCell.self, forCellReuseIdentifier: "Post")
         tableView.register(ProfileHeaderView.self, forHeaderFooterViewReuseIdentifier: "ProfileHeader")
         tableView.register(PhotosTableViewCell.self, forCellReuseIdentifier: PhotosTableViewCell.reuseIdentifier)
-        
-        tableView.delegate = self
-        tableView.dataSource = self
     }
     private func startEyeTimer(){
         let eyeTimer = AlertWithTimer(
@@ -175,8 +174,7 @@ extension ProfileViewController: UITableViewDataSource {
                 }
                 self.favoriteVCDelegate?.addToFavorite(post: self.posts[indexPath.row-1])
             })
-            gesture.numberOfTapsRequired = 2 
-            
+            gesture.numberOfTapsRequired = 2
             cell.addGestureRecognizer(gesture)
             
             return cell

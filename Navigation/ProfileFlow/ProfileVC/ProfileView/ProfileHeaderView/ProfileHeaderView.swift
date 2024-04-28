@@ -26,7 +26,7 @@ class ProfileHeaderView: UITableViewHeaderFooterView{
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = ""
-        label.textColor = .black
+        label.textColor = .customTintColor
         label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 18)
         return label
@@ -36,7 +36,7 @@ class ProfileHeaderView: UITableViewHeaderFooterView{
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = ""
-        label.textColor = .darkGray
+        label.textColor = .customTintColor
         label.textAlignment = .center
         label.font = UIFont(name: label.font.fontName, size: 14)
         label.textAlignment = .left
@@ -50,8 +50,8 @@ class ProfileHeaderView: UITableViewHeaderFooterView{
         field.translatesAutoresizingMaskIntoConstraints = false
         
 
-        field.backgroundColor = .systemBackground
-        field.textColor = .black
+        field.backgroundColor = .customViewBackGroundColor
+        field.textColor = .customTintColor
         field.font = field.font?.withSize(15)
         field.placeholder = NSLocalizedString("Set status", comment: "")
         
@@ -102,7 +102,8 @@ class ProfileHeaderView: UITableViewHeaderFooterView{
     // MARK: Private
     
     private func tuneView() {
-        contentView.backgroundColor = .systemGray6
+        contentView.backgroundColor = .customViewBackGroundColor
+
     }
     private func addSubviews() {
         contentView.addSubview(button)
