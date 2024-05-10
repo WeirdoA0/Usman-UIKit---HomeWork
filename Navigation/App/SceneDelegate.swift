@@ -21,7 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: scene)
 //        let appConfiguarion: AppConfiguration = AppConfiguration.allCases.randomElement()!
 //        let url = appConfiguarion.url
-//        NetworkService.request(url: url!)
+//        let service = NetworkService(service: DataTaskService())
+//        service.request(url: url!)
 
 
 
@@ -56,7 +57,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
 
     func sceneDidDisconnect(_ scene: UIScene) {
-        try? Auth.auth().signOut()
+        signOut()
         
     }
 

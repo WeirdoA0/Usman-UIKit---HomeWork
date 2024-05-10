@@ -8,7 +8,7 @@
 import FirebaseAuth
 
 
- protocol CheckerServiceProtocol {
+ public protocol CheckerServiceProtocol {
     
     
     func checkCredentials(login: String, password: String, completion: @escaping(Result<UserFirebase, Error>) -> Void)
@@ -49,6 +49,7 @@ class CheckerService: CheckerServiceProtocol {
     
     
 }
+
 
 
 

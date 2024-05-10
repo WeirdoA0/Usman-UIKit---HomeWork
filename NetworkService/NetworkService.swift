@@ -8,33 +8,44 @@
 import Foundation
 
 
-public struct NetworkService {
-    public static func request(url: URL) {
-        let session = URLSession.shared
+public final class NetworkService {
+    public let service: IDataTaskService
+    public var resultStatus: ResultStatus?
+    public init(service: IDataTaskService) {
+        self.service = service
+    }
+    
+    public func request(url: URL) {
         let request: URLRequest = URLRequest(url: url)
-        
-        let dataTask = session.dataTask(with: request){data,response,erorr in
-            if let erorr  {
-                print(erorr.localizedDescription)
+        service.completeRequest(request: request) { [weak self] data, response, error in
+            if let error  {
+                print(error.localizedDescription)
+                self?.resultStatus = .requestError
                 return
             }
             if let HTTPSResopnse = response as? HTTPURLResponse {
                 switch HTTPSResopnse.statusCode {
                 case 200:
-                    guard let data = data else { print("Failed to decode"); return }
+                    guard let data  else {
+                        print("Failed to decode")
+                        self?.resultStatus = .empty
+                        return
+                    }
+                    self?.resultStatus = .success
                     let dataToPrint = String(decoding: data, as: UTF8.self)
                     let statusCode = HTTPSResopnse.statusCode
                     let headerFields = HTTPSResopnse.allHeaderFields
-                    print(dataToPrint, statusCode, headerFields)
+                    print(dataToPrint, statusCode, headerFields )
                     
                 case 404:
+                    self?.resultStatus = .badResponce
                     print("Not found")
                 default:
+                    self?.resultStatus = .badResponce
                     print("Unowed")
                 }
             }
         }
-        dataTask.resume()
     }
 }
 
@@ -47,6 +58,12 @@ public enum AppConfiguration: String, CaseIterable {
     public var url: URL? {
         URL(string: self.rawValue)
     }
+}
+public enum ResultStatus {
+    case requestError
+    case badResponce
+    case success 
+    case empty
 }
 
 

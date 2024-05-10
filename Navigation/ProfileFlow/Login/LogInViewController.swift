@@ -294,14 +294,14 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                 
                 VController.viewModel = ProfileViewModel(user: userService.user)
                 VController.favoriteVCDelegate = favoriteVC
-
+                
                 VController.tabBarItem = self?.tabBarItem
                 self?.navigationController?.setViewControllers([VController], animated: true)
                 
             }
-
+            
         })
-
+        
         
         
     }

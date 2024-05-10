@@ -7,9 +7,9 @@
 
 import Foundation
 import UIKit
-public struct LoginInspector: LoginViewControllerDelegate {
+public final class LoginInspector: LoginViewControllerDelegate {
 
-    private let service = CheckerService()
+    private let service: CheckerServiceProtocol
     
     
     public func singUp(login: String, password: String, completion: @escaping(Result<UserFirebase, Error>) -> Void){
@@ -21,5 +21,7 @@ public struct LoginInspector: LoginViewControllerDelegate {
     }
     
     
-    public init(){}
+    public init(checker: CheckerServiceProtocol){
+        self.service = checker
+    }
 }

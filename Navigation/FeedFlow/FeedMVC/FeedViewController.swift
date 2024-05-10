@@ -26,17 +26,17 @@ extension FeedViewController: FeedViewDegelegate {
     
     func returnBool() -> Bool {
         let word = (view as! FeedView).returnWord()
-        let bool =  model!.check(word: word)
-        return bool
+        let bool = try?  model!.check(word: word)
+        return bool ?? false
     }
 
     func check()  {
         let word = (view as! FeedView).returnWord()
-        let bool =  model!.check(
+        let bool =  try? model!.check(
             word: word
         )
         NotificationCenter.default.post(Notification(name: .btnEvent))
-        print(bool)
+        print(bool ?? false)
     }
     
     func push() {

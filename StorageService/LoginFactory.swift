@@ -9,11 +9,15 @@ import Foundation
 
 public protocol LoginFactory {
     func makeLoginInspector() -> LoginInspector
+    func makeChecker() -> CheckerServiceProtocol
 }
 
 public struct MyLoginFactory: LoginFactory {
     public func makeLoginInspector() -> LoginInspector {
-        LoginInspector()
+        LoginInspector(checker: CheckerService())
+    }
+    public func makeChecker() -> any CheckerServiceProtocol {
+        CheckerService()
     }
     public init(){}
     
