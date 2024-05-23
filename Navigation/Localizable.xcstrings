@@ -51,6 +51,16 @@
         }
       }
     },
+    "Check out the latest updates" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Посмотрите последние обновления"
+          }
+        }
+      }
+    },
     "Confirm" : {
       "localizations" : {
         "ru" : {
@@ -241,6 +251,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Создать аккаунт"
+          }
+        }
+      }
+    },
+    "Some Action" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\"Некоторое действие\""
           }
         }
       }
