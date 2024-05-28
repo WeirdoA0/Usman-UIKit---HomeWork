@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  Navigation
+
+  Created by Руслан Усманов on 25.05.2024.
+  
+*/
+"NSFaceIDUsageDescription" = "FaceID is required";
