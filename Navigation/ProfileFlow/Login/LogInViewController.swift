@@ -10,18 +10,36 @@ import StorageService
 class LogInViewController: UIViewController, UITextFieldDelegate {
     
     var loginDelegate: LoginViewControllerDelegate?
-    
+    var biometricService: LocalAuthorizationService? = LocalAuthorizationService()
     
     //MARK: SubViews
+    
+    private lazy var biometricButton: UIButton = CustomButton(title: "" , textColor: .customTintColor, backColor: nil, closure: { [weak self] in
+            self?.biometricService?.authorizeIfPossible({ [weak self] bool in
+                guard let self else { return }
+                if bool{
+                    authorizationFinished()
+                }
+            })
+        })
+    
+    private lazy var biometricButtonLabel: UILabel = {
+       let lbl = UILabel()
+        lbl.text = NSLocalizedString("Auth with", comment: "")
+        lbl.font = UIFont.systemFont(ofSize: 12)
+        lbl.textColor = .customTintColor
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        return lbl
+    }()
+
     
     private lazy var scrollView: UIScrollView = {
         let scroll = UIScrollView()
         scroll.showsHorizontalScrollIndicator = false
         scroll.showsVerticalScrollIndicator = false
+        scroll.isScrollEnabled = true
         
         scroll.translatesAutoresizingMaskIntoConstraints = false
-        
-        
         
         return scroll
     }()
@@ -136,7 +154,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         setConstaints()
         tuneSubViews()
         
-        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -146,14 +163,10 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         super.viewDidDisappear(animated)
         removeObservers()
     }
-    
-    // MARK: SetView
-    private func setView() {
-        view.backgroundColor = .customControllerBackGroundColor
-    }
+
     //MARK: addSubviews
     private func addSubviews() {
-        [loginPasswordField, loginButton , VKLogo, signUpBtn].forEach({
+        [loginPasswordField, loginButton , VKLogo, signUpBtn, biometricButton, biometricButtonLabel].forEach({
             contentView.addSubview($0)
         })
         scrollView.addSubview(contentView)
@@ -164,6 +177,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     //MARK: Constraints
     private func setConstaints() {
         let safeArea = view.safeAreaLayoutGuide
+        
         NSLayoutConstraint.activate([
             
             scrollView.topAnchor.constraint(equalTo: safeArea.topAnchor),
@@ -180,7 +194,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             contentView.heightAnchor.constraint(equalTo: scrollView.heightAnchor),
             
             
-            VKLogo.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 120),
+            VKLogo.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 90),
             VKLogo.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             VKLogo.heightAnchor.constraint(equalToConstant: 100),
             VKLogo.widthAnchor.constraint(equalToConstant: 100),
@@ -188,7 +202,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             loginPasswordField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             loginPasswordField.heightAnchor.constraint(equalToConstant: 100.5),
             loginPasswordField.widthAnchor.constraint(equalTo: contentView.widthAnchor, constant:  -32),
-            loginPasswordField.topAnchor.constraint(equalTo: VKLogo.bottomAnchor, constant: 120),
+            loginPasswordField.topAnchor.constraint(equalTo: VKLogo.bottomAnchor, constant: 90),
             
             loginButton.topAnchor.constraint(equalTo: loginPasswordField.bottomAnchor, constant: 16),
             loginButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
@@ -199,17 +213,15 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             signUpBtn.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             signUpBtn.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             signUpBtn.heightAnchor.constraint(equalToConstant: 50),
+            
+            biometricButton.topAnchor.constraint(equalTo: signUpBtn.bottomAnchor, constant: 32),
+            biometricButton.widthAnchor.constraint(equalToConstant: 50),
+            biometricButton.heightAnchor.constraint(equalToConstant: 50),
+            biometricButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+
+            biometricButtonLabel.bottomAnchor.constraint(equalTo: biometricButton.topAnchor, constant: -4),
+            biometricButtonLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
         ])
-    }
-    
-    private func tuneSubViews(){
-        loginButton.setBackgroundImage(UIImage(named: "pixel"), for: .normal)
-        loginButton.layer.cornerRadius = 10
-        loginButton.layer.masksToBounds = true
-        
-        signUpBtn.setBackgroundImage(UIImage(named: "pixel"), for: .normal)
-        signUpBtn.layer.cornerRadius = 10
-        signUpBtn.layer.masksToBounds = true
     }
     
     
@@ -252,6 +264,29 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     }
     
     //MARK: Private
+    
+    private func setView() {
+        view.backgroundColor = .customControllerBackGroundColor
+    }
+    
+    private func tuneSubViews(){
+        loginButton.setBackgroundImage(UIImage(named: "pixel"), for: .normal)
+        loginButton.layer.cornerRadius = 10
+        loginButton.layer.masksToBounds = true
+        
+        signUpBtn.setBackgroundImage(UIImage(named: "pixel"), for: .normal)
+        signUpBtn.layer.cornerRadius = 10
+        signUpBtn.layer.masksToBounds = true
+        
+        biometricService?.getBiometryType(isFaceID: { [weak self] bool in
+            if bool {
+                self?.biometricButton.setImage(UIImage(named: "faceIDIcon"), for: .normal)
+            } else {
+                self?.biometricButton.setImage(UIImage(named: "touchIDIcon"), for: .normal)
+            }
+        })
+    }
+
     private func pullAnError() {
         let alert = UIAlertController(title: NSLocalizedString("Incorrect login or password", comment: ""), message: NSLocalizedString("Enter correct login and password", comment: ""), preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
@@ -262,15 +297,33 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         if loginField.text == "" {
             isNotEmpty = false
             throw AppError.emptyField
-        } else  {}
+        }
     
         if passwordField.text == "" {
             isNotEmpty = false
             throw AppError.emptyField
-        }  else {}
+        }
         return isNotEmpty
         }
     
+    private func authorizationFinished(){
+#if DEBUG
+        let userService = TestUserService()
+#else
+        let userService = CurrentUserService()
+#endif
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            let VController = ProfileViewController()
+            let favoriteVC = (self.tabBarController?.viewControllers?.last as? UINavigationController)?.viewControllers.first as? FavoritesViewController
+            
+            VController.viewModel = ProfileViewModel(user: userService.user)
+            VController.favoriteVCDelegate = favoriteVC
+            
+            VController.tabBarItem = self.tabBarItem
+            self.navigationController?.setViewControllers([VController], animated: true)
+        }
+    }
     
     //MARK: Login & SignUp
     
@@ -283,20 +336,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             case .success(let user):
                 print(user.user.uid)
                 
-#if DEBUG
-                let userService = TestUserService()
-#else
-                let userService = CurrentUserService()
-#endif
-                
-                let VController = ProfileViewController()
-                let favoriteVC = (self?.tabBarController?.viewControllers?.last as? UINavigationController)?.viewControllers.first as? FavoritesViewController
-                
-                VController.viewModel = ProfileViewModel(user: userService.user)
-                VController.favoriteVCDelegate = favoriteVC
-                
-                VController.tabBarItem = self?.tabBarItem
-                self?.navigationController?.setViewControllers([VController], animated: true)
+                self?.authorizationFinished()
                 
             }
             

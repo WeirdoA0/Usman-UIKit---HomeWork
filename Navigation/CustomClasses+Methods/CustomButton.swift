@@ -19,12 +19,12 @@ class CustomButton: UIButton {
         closure()
     }
     
-    init(title: String, textColor: UIColor, backColor: UIColor?, closure: @escaping () -> Void = {}, font: UIFont = UIFont.systemFont(ofSize: 12) ) {
+    init(title: String, textColor: UIColor, backColor: UIColor?,font: UIFont = UIFont.systemFont(ofSize: 12), closure: @escaping () -> Void = {} ) {
         self.title = title
         self.textColor = textColor
         self.backColor = backColor
-        self.closure = closure
         self.font = font
+        self.closure = closure
         
         super.init(frame: .zero)
         
@@ -43,6 +43,3 @@ class CustomButton: UIButton {
     
 }
 
-private let btn = CustomButton(title: "", textColor: .blue, backColor: .white){
-    
-}

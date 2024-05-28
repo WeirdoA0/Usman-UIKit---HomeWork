@@ -21,6 +21,9 @@
         }
       }
     },
+    "Auth with" : {
+
+    },
     "Button" : {
       "localizations" : {
         "ru" : {
